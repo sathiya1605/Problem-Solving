@@ -5,7 +5,7 @@ class CamelCase{
           Scanner s = new Scanner(System.in);
           String inp = s.nextLine();
 
-          Character []arr = {'!','@', '#', '$', '%', '*', '-', ' '};
+          Character []arr = {'!','@', '#', '$', '%', '*', '-', ' '};   // the required de-limiters can be added here
           HashSet<Character> delim = new HashSet<>(Arrays.asList(arr));
 
           for(int i=0; i<inp.length(); i++){
