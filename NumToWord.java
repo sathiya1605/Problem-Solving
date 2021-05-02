@@ -1,3 +1,10 @@
+/*
+
+i/p : 1234   o/p: one thousand two hundred and thirty four
+i/p:  11     o/p: eleven
+
+*/
+
 import java.util.Scanner;
 
 public class NumToWord{
