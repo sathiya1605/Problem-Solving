@@ -8,46 +8,34 @@ public class NumToWord{
           String []ones = {"one","two","three","four","five","six","seven","eight","nine", "ten"};
           String []tens = {"ten","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninty"};
           String []elevens = {"eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen", "twenty"};
-          //String []hundreds = {};
 
           int number = Integer.parseInt(num), remainder;
 
-          if(num.length()==1){
-               if(number == 0) System.out.print("zero");
-               else System.out.print(ones[number-1]);
-               return;
+          if(number >= 1000 && number<= 9999){
+               System.out.print(ones[number/1000 - 1]+" thousand ");
+               number%=1000;
           }
-          if(num.length() == 2){
-               if(number%10 == 0) System.out.print(tens[number/10 - 1]);
-               else if(number >= 11 && number <= 19) System.out.print(elevens[number-11]);
-               else if(number%10!=0 && number>=21 && number<=99 ){
-                    System.out.print(tens[number/10 -1]+" ");
-                    System.out.print(ones[number%10 -1]);
+          if(number >= 100 && number<=999){
+               System.out.print(ones[number/100 - 1]+" hundred and ");
+               number%=100;
+          }
+          if(number >= 10 && number <= 99){
+               if(number%10 == 0){
+                    System.out.print(tens[number/10 - 1]);
                     return;
                }
-               return;
+               else if(number >= 11 && number <= 19){
+                    System.out.print(elevens[number-11]+" ");
+                    return;
+               }
+               else if(number%10!=0 && number>=21 && number<=99 ) System.out.print(tens[number/10 -1]+" ");
+               number%=10;
           }
-          if(num.length()==3){
-               if(number%100 == 0) System.out.print(ones[number/100]+" hundred");
-               else if(number%100 >=1 && number%100 <=10){
-                    System.out.print(ones[number/100 - 1]+" hundred and ");
-                    System.out.print(ones[(number%100) - 1]);
-               }
-               else if(number%100 >=11 && number%100 <=20){
-                    System.out.print(ones[number/100 - 1]+" hundred and ");
-                    System.out.print(elevens[(number%100)-10 - 1]);
-               }
-               else if(number%10 == 0){
-                    System.out.print(ones[number/100 - 1]+" hundred and ");
-                    System.out.print(tens[(number%100)/10 - 1]);
-               }
-               else if(number>=121 && number<=999){
-                    System.out.print(ones[number/100 - 1]+" hundred and ");
-                    System.out.print(tens[(number%100)/10 - 1]+" ");
-                    System.out.print(ones[(number%100)%10 - 1]);
-               }
+          if(number >= 0 && number <=9){
+               if(number == 0) System.out.print("zero");
+               else System.out.print(ones[number-1]);
           }
+
      }
 }
 
-//System.out.print();
