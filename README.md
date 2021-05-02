@@ -1,3 +1,4 @@
+![Image](https://octodex.github.com/images/electrocat.png)
 # Welcome to Sathiya's GitHub Page
 
 You can use the [editor on GitHub](https://github.com/sathiya1605/problem-solving/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
