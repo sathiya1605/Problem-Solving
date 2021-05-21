@@ -1,3 +1,12 @@
+/*
+
+ Reverse the given string in the following method
+ i/p: abcd efgh hijk
+ o/p: dcba hgfe kjih
+ 
+*/
+
+
 import java.util.Scanner;
 
 class RevBySpace{
